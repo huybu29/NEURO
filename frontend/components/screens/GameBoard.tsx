@@ -246,7 +246,7 @@ export default function GameBoard() {
             <div className="text-[9px] font-mono text-[#ffe600] mb-3 uppercase tracking-widest text-center">/// ACTION_POINTS</div>
             <div className="flex justify-center gap-2 md:gap-3">
               {Array.from({length: apMax}).map((_, i) => {
-                const isFlashingAp = typeof hoveredApCost === 'number' && hoveredApCost > 'ALL' && hoveredApCost > 0 && i >= (ap - (hoveredApCost as number)) && i < ap;
+                const isFlashingAp = typeof hoveredApCost === 'number' && hoveredApCost > 0 && hoveredApCost > 0 && i >= (ap - (hoveredApCost as number)) && i < ap;
                 const isFlashingAllAp = hoveredCard?.ap === 'ALL' && i < ap;
 
                 return (

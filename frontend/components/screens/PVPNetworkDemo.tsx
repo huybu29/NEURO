@@ -24,7 +24,7 @@ export default function PvPNetworkDemo() {
   const [showTutorial, setShowTutorial] = useState(false);
 
   useEffect(() => {
-    const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || 'http://localhost:4000';
+    const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:4000';
     const newSocket = io(BACKEND_URL);
     setSocket(newSocket);
     
